@@ -1,6 +1,6 @@
 ## Firebase authentification boilerplate with hooks!
 
-[Live example 👀](https://pensive-villani-57d695.netlify.com/login).
+[Live example 👀](https://pensive-villani-57d695.netlify.com/#/signup).
 ![Thumbnail](1_preview.png)
 
 ### This project uses :
