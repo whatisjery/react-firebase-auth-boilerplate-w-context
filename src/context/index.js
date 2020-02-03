@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
 
     useEffect(() => app.auth().onAuthStateChanged(setUser), []);
 
-    const handleLogin = async data => {
+    const signInUser = async data => {
         try {
             dispatch({ type: type.AUTH_TRY });
             await app
@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
-    const handleSignUp = async data => {
+    const signUpUser = async data => {
         try {
             dispatch({ type: type.AUTH_TRY });
             await app
@@ -50,7 +50,7 @@ export const AuthProvider = ({ children }) => {
 
     return (
         <AuthContext.Provider
-            value={{ user, handleLogin, handleSignUp, logout, state }}
+            value={{ user, signInUser, signUpUser, logout, state }}
         >
             {children}
         </AuthContext.Provider>

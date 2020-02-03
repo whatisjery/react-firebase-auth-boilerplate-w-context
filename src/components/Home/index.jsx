@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { AuthContext } from "../../context/";
 
 const Home = () => {
-    const { logout, user } = useContext(AuthContext);
+    const { signOutUser, user } = useContext(AuthContext);
 
     return (
         <div className="c-global">
@@ -10,7 +10,7 @@ const Home = () => {
                 <h1>Connexion succefull</h1>
                 <span>user email : {user.email} is connected</span>
                 <span>user ud : {user.uid}</span>
-                <button onClick={logout}>Logout</button>
+                <button onClick={signOutUser}>Logout</button>
             </div>
         </div>
     );

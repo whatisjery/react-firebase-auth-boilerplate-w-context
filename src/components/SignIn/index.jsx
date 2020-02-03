@@ -14,9 +14,9 @@ import FormWrapper from "../layout/FormWrapper";
 import styles from "../../css-module/form.module.css";
 
 const Login = () => {
-    const { handleLogin, state } = useContext(AuthContext);
+    const { signInUser, state } = useContext(AuthContext);
     const { handleSubmit, register, errors } = useForm();
-    const onSubmit = async values => handleLogin(values);
+    const onSubmit = async values => signInUser(values);
 
     return (
         <ContentWrapper>
