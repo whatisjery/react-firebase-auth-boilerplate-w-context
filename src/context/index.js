@@ -22,8 +22,8 @@ export const AuthProvider = ({ children }) => {
                 .signInWithEmailAndPassword(data.email, data.password);
             dispatch({ type: type.AUTH_SUCCESS });
         } catch (error) {
-            console.log(error);
-            dispatch({ type: type.AUTH_ERROR });
+            const msg = error.message;
+            dispatch({ type: type.AUTH_ERROR, payload: msg });
         }
     };
 
@@ -35,22 +35,32 @@ export const AuthProvider = ({ children }) => {
                 .createUserWithEmailAndPassword(data.email, data.password);
             dispatch({ type: type.AUTH_SUCCESS });
         } catch (error) {
-            console.error(error);
-            dispatch({ type: type.AUTH_ERROR });
+            const msg = error.message;
+            dispatch({ type: type.AUTH_ERROR, payload: msg });
         }
     };
 
     const signOutUser = async () => {
         try {
             await app.auth().signOut();
-        } catch (err) {
-            console.log(err);
+        } catch (error) {
+            const msg = error.message;
+            dispatch({ type: type.AUTH_ERROR, payload: msg });
         }
     };
 
+    const cleanUp_UI = async () => dispatch({ type: type.AUTH_CLEAN_UP });
+
     return (
         <AuthContext.Provider
-            value={{ user, signInUser, signUpUser, signOutUser, state }}
+            value={{
+                user,
+                signInUser,
+                signUpUser,
+                signOutUser,
+                cleanUp_UI,
+                state
+            }}
         >
             {children}
         </AuthContext.Provider>
