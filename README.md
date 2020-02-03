@@ -14,11 +14,11 @@
 
 ### usage :
 
-1 - Create a firebase project
-2 - Go to "Project settings"
-3 - Register your app
-4 - Copy the apiKey inside the firebaseConfig object
-5 - create a .env and past the apiKey previously copied like :
+1. Create a firebase project
+2. Go to "Project settings"
+3. Register your app
+4. Copy the apiKey inside the firebaseConfig object
+5. create a .env and past the apiKey previously copied like :
 
 ```
 REACT_APP_API_KEY='YOUR_KEY'
