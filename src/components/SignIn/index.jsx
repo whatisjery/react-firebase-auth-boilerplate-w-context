@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import loader from "../../assets/loader.svg";
 
 // => Context
 import { AuthContext } from "../../context";
@@ -9,6 +8,7 @@ import { AuthContext } from "../../context";
 // => Components
 import ContentWrapper from "../layout/ContentWrapper";
 import FormWrapper from "../layout/FormWrapper";
+import Loader from "../loader";
 
 // => styles
 import formStyle from "../../css-module/form.module.css";
@@ -19,9 +19,7 @@ const Login = () => {
     const { handleSubmit, register, errors } = useForm();
     const onSubmit = async values => signInUser(values);
 
-    useEffect(() => {
-        cleanUp_UI();
-    }, []);
+    useEffect(() => void cleanUp_UI(), []);
 
     return (
         <ContentWrapper>
@@ -89,10 +87,7 @@ const Login = () => {
                     )}
                 </FormWrapper>
             ) : (
-                <div className="loader-container">
-                    <img className="loader" src={loader} alt="loader" />
-                    <span>Connecting ...</span>
-                </div>
+                <Loader />
             )}
         </ContentWrapper>
     );
