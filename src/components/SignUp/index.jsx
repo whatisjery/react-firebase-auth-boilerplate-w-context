@@ -13,12 +13,12 @@ import FormWrapper from "../layout/FormWrapper";
 import styles from "../../css-module/form.module.css";
 
 const SignUp = () => {
-    const { handleSignUp } = useContext(AuthContext);
+    const { signUpUser } = useContext(AuthContext);
     const { register, errors, handleSubmit, watch } = useForm();
     const password = React.useRef({});
     password.current = watch("password", "");
 
-    const onSubmit = async values => handleSignUp(values);
+    const onSubmit = async values => signUpUser(values);
 
     return (
         <ContentWrapper>

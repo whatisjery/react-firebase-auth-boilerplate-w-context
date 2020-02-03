@@ -40,7 +40,7 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
-    const logout = async () => {
+    const signOutUser = async () => {
         try {
             await app.auth().signOut();
         } catch (err) {
@@ -50,7 +50,7 @@ export const AuthProvider = ({ children }) => {
 
     return (
         <AuthContext.Provider
-            value={{ user, signInUser, signUpUser, logout, state }}
+            value={{ user, signInUser, signUpUser, signOutUser, state }}
         >
             {children}
         </AuthContext.Provider>
