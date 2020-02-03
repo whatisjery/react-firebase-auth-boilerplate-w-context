@@ -1,4 +1,4 @@
-## Firebase authenticatio boilerplate with hooks!
+## Firebase authentication boilerplate with hooks!
 
 [Live example 👀](https://pensive-villani-57d695.netlify.com/#/signup).
 ![Thumbnail](1_preview.png)
@@ -21,5 +21,5 @@
 REACT_APP_API_KEY='YOUR_KEY'
 ```
 
-the context return several methods for user authentification e.g, signInUser etc, ... (it can be completed using the same logic with firebase e.g, a recovering password ...).
-It also returns a 'user' object, that give informations about the the current user that is logged in.
+the context return several methods for user authentification e.g, signInUser, signUpUser etc, ... (it can be completed using other firebase method e.g, recover password ...).
+It also returns a 'user' object that gives informations about the user that is currently logged in.
