@@ -9,8 +9,9 @@ import { AuthContext } from "../../context";
 import ContentWrapper from "../layout/ContentWrapper";
 import FormWrapper from "../layout/FormWrapper";
 
-// => Styles
-import styles from "../../css-module/form.module.css";
+// => styles
+import formStyle from "../../css-module/form.module.css";
+import btnStyle from "../../css-module/btn.module.css";
 
 const SignUp = () => {
     const { signUpUser } = useContext(AuthContext);
@@ -23,13 +24,16 @@ const SignUp = () => {
     return (
         <ContentWrapper>
             <FormWrapper title="sign up 👀">
-                <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-                    <div className={styles.form__section}>
-                        <label className={styles.form__section__title}>
+                <form
+                    onSubmit={handleSubmit(onSubmit)}
+                    className={formStyle.form}
+                >
+                    <div className={formStyle.form__section}>
+                        <label className={formStyle.form__section__title}>
                             Email
                         </label>
                         <input
-                            className={styles.form__section__input}
+                            className={formStyle.form__section__input}
                             name="email"
                             ref={register({
                                 required: "Required",
@@ -40,12 +44,12 @@ const SignUp = () => {
                             })}
                         />
                     </div>
-                    <div className={styles.form__section}>
-                        <label className={styles.form__section__title}>
+                    <div className={formStyle.form__section}>
+                        <label className={formStyle.form__section__title}>
                             Password
                         </label>
                         <input
-                            className={styles.form__section__input}
+                            className={formStyle.form__section__input}
                             name="password"
                             type="password"
                             ref={register({
@@ -59,12 +63,12 @@ const SignUp = () => {
                         />
                         {errors.password && <p>{errors.password.message}</p>}
                     </div>
-                    <div className={styles.form__section}>
-                        <label className={styles.form__section__title}>
+                    <div className={formStyle.form__section}>
+                        <label className={formStyle.form__section__title}>
                             Confirm Password
                         </label>
                         <input
-                            className={styles.form__section__input}
+                            className={formStyle.form__section__input}
                             name="password_repeat"
                             type="password"
                             ref={register({
@@ -78,15 +82,15 @@ const SignUp = () => {
                         )}
                     </div>
 
-                    <div className={styles.form__submit}>
+                    <div className={formStyle.form__submit}>
                         <input
-                            className={styles.form__submit__btn}
+                            className={btnStyle.btn}
                             type="submit"
                             value="validate"
                         />
                     </div>
                 </form>
-                <div className={styles.form__helper}>
+                <div className={formStyle.form__helper}>
                     <Link to="/login">I have an account</Link>
                 </div>
             </FormWrapper>

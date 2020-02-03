@@ -1,0 +1,23 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home .home__title {
+    padding: 2rem 0;
+}
+.home .home__info {
+    padding: 0.5rem 0;
+
+    color: rgb(65, 65, 65);
+}
+
+.home .home__info span {
+    color: grey;
+    font-weight: lighter;
+}
+
+.home__btn {
+    padding: 5rem 0;
+}

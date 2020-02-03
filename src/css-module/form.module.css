@@ -3,6 +3,7 @@
     width: 75%;
     flex-direction: column;
     align-items: center;
+    font-size: 1rem;
 }
 .form__section {
     width: 100%;
@@ -20,6 +21,9 @@
     height: 2.5rem;
     border: 1px solid rgb(207, 207, 207);
     border-radius: 0.3rem;
+    color: rgb(78, 78, 78) (70, 70, 70);
+    font-size: inherit;
+    text-indent: 1rem;
 }
 
 .form__section__error {
