@@ -47,6 +47,9 @@ const SignUp = () => {
                                     }
                                 })}
                             />
+                            <small className={formStyle.form__section__error}>
+                                {errors.email && errors.email.message}
+                            </small>
                         </div>
                         <div className={formStyle.form__section}>
                             <label className={formStyle.form__section__title}>
@@ -65,9 +68,10 @@ const SignUp = () => {
                                     }
                                 })}
                             />
-                            {errors.password && (
-                                <p>{errors.password.message}</p>
-                            )}
+
+                            <small className={formStyle.form__section__error}>
+                                {errors.password && errors.password.message}
+                            </small>
                         </div>
                         <div className={formStyle.form__section}>
                             <label className={formStyle.form__section__title}>
@@ -83,9 +87,10 @@ const SignUp = () => {
                                         "The passwords do not match"
                                 })}
                             />
-                            {errors.password_repeat && (
-                                <p>{errors.password_repeat.message}</p>
-                            )}
+                            <small className={formStyle.form__section__error}>
+                                {errors.password_repeat &&
+                                    errors.password_repeat.message}
+                            </small>
                         </div>
 
                         <div className={formStyle.form__submit}>
