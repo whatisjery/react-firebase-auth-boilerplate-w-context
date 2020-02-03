@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import loader from "../../assets/loader.svg";
@@ -15,9 +15,13 @@ import formStyle from "../../css-module/form.module.css";
 import btnStyle from "../../css-module/btn.module.css";
 
 const Login = () => {
-    const { signInUser, state } = useContext(AuthContext);
+    const { signInUser, cleanUp_UI, state } = useContext(AuthContext);
     const { handleSubmit, register, errors } = useForm();
     const onSubmit = async values => signInUser(values);
+
+    useEffect(() => {
+        cleanUp_UI();
+    }, []);
 
     return (
         <ContentWrapper>
@@ -64,6 +68,7 @@ const Login = () => {
                                 {errors.password && errors.password.message}
                             </small>
                         </div>
+
                         <div className={formStyle.form__submit}>
                             <input
                                 className={btnStyle.btn}
@@ -73,9 +78,15 @@ const Login = () => {
                         </div>
                     </form>
 
-                    <div className={formStyle.form__helper}>
-                        <Link to="/signup">Create an account</Link>
-                    </div>
+                    {state.errorMsg !== null ? (
+                        <small className={formStyle.form__section__error}>
+                            {state.errorMsg}
+                        </small>
+                    ) : (
+                        <div className={formStyle.form__helper}>
+                            <Link to="/signup">Create an account</Link>
+                        </div>
+                    )}
                 </FormWrapper>
             ) : (
                 <div className="loader-container">

@@ -2,7 +2,7 @@ import * as firebase from "firebase/app";
 import "firebase/auth";
 
 const app = firebase.initializeApp({
-    apiKey: process.env.API_KEY,
+    apiKey: process.env.REACT_APP_API_KEY,
     authDomain: "auth-boilerplate-4b8b7.firebaseapp.com",
     databaseURL: "https://auth-boilerplate-4b8b7.firebaseio.com",
     projectId: "auth-boilerplate-4b8b7",
