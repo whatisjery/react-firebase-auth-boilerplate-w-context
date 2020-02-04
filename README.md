@@ -1,5 +1,7 @@
 ## Firebase authentication boilerplate with hooks!
 
+Quick settup for getting started with firebase authentication whithin a react application using the context API as an alternative to redux.
+
 [Live example 👀](https://pensive-villani-57d695.netlify.com/#/signup).
 ![Thumbnail](1_preview.png)
 
@@ -11,14 +13,15 @@
 
 ### usage :
 
-1. Create a firebase project
-2. Go to "Project settings"
-3. Register your app
-4. Copy the apiKey inside the firebaseConfig object
-5. create a .env and past the apiKey previously copied like this:
+Replace the firebase config by yours, and sucure necessary data to a .env file, e.g :
 
 ```
 REACT_APP_API_KEY='YOUR_KEY'
+
+const app = firebase.initializeApp({
+    apiKey: process.env.REACT_APP_API_KEY,
+    ...rest,
+})
 ```
 
 the context return several methods for user authentification e.g, signInUser, signUpUser etc, ... (it can be completed using other firebase method e.g, recover password ...).
