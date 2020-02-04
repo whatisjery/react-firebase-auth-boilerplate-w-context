@@ -3,7 +3,7 @@
 Quick setup for getting started with firebase auth within a react application using the context API as an alternative to redux.
 
 [Live example 👀](https://pensive-villani-57d695.netlify.com/#/signup).
-![Thumbnail](1_preview.png)
+![Thumbnail](preview.png)
 
 ### This project uses :
 
