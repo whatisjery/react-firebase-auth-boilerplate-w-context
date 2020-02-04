@@ -1,8 +1,8 @@
 ## Firebase authentication boilerplate with hooks!
 
-Quick setup for getting started with firebase auth within a react application using the context API as an alternative to redux.
+Quick setup for getting started with firebase auth within a react application using the context API as an alternative to redux. [Live example](https://pensive-villani-57d695.netlify.com/#/signup).
 
-[Live example 👀](https://pensive-villani-57d695.netlify.com/#/signup).
+
 ![Thumbnail](preview.png)
 
 ### This project uses :
