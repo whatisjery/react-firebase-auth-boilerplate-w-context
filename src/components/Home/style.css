@@ -9,12 +9,11 @@
 }
 .home .home__info {
     padding: 0.5rem 0;
-
-    color: rgb(65, 65, 65);
+    color: var(--dark-grey);
 }
 
 .home .home__info span {
-    color: grey;
+    color: var(--light-grey);
     font-weight: lighter;
 }
 

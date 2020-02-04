@@ -24,7 +24,7 @@ const Login = () => {
     return (
         <ContentWrapper>
             {!state.loading ? (
-                <FormWrapper title="🚀sign in">
+                <FormWrapper title="Login form.">
                     <form
                         onSubmit={handleSubmit(onSubmit)}
                         className={formStyle.form}

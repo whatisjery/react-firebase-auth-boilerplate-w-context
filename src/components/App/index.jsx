@@ -5,7 +5,6 @@ import { Route, Redirect } from "react-router-dom";
 // => Components
 import Home from "../Home";
 import Navbar from "../layout/Navbar";
-import Footer from "../layout/Footer";
 import SignUp from "../SignUp";
 import SignIn from "../SignIn";
 
@@ -14,7 +13,7 @@ function App() {
     return (
         <>
             <Navbar />
-            <div style={{ flex: "0.25", paddingBottom: "2rem" }}>
+            <div>
                 {!user ? (
                     <>
                         <Route exact component={SignUp} path="/signup" />
@@ -28,7 +27,6 @@ function App() {
                     </>
                 )}
             </div>
-            <Footer />
         </>
     );
 }

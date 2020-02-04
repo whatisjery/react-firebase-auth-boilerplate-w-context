@@ -15,13 +15,13 @@
     font-size: 1rem;
     font-weight: lighter;
     margin-bottom: 0.2rem;
-    color: rgb(114, 114, 114);
+    color: var(--dark-grey);
 }
 .form__section__input {
     height: 2.5rem;
-    border: 1px solid rgb(207, 207, 207);
+    border: 1px solid var(--light-grey);
     border-radius: 0.3rem;
-    color: rgb(78, 78, 78) (70, 70, 70);
+    color: var(--dark-grey);
     font-size: inherit;
     text-indent: 1rem;
 }
