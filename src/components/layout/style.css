@@ -1,17 +1,22 @@
 /* wrappers */
-.content-wrapper {
+
+.main-wrapper {
+    min-height: calc(100vh - 5rem);
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding-top: 5.5rem;
 }
+
 .form-wrapper {
-    display: flex;
-    min-width: 30rem;
     background: white;
+    min-width: 30rem;
+    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 4rem 2rem;
     box-shadow: 10px 10px 22px 1px rgba(0, 0, 0, 0.048);
+
+    margin-bottom: 10rem;
 }
 .form-wrapper .form-wrapper__title {
     font-size: 1.2rem;

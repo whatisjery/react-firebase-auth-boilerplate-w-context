@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../context";
 
 // => Components
-import ContentWrapper from "../layout/ContentWrapper";
+
 import FormWrapper from "../layout/FormWrapper";
 import Loader from "../loader";
 
@@ -22,7 +22,7 @@ const Login = () => {
     useEffect(() => void cleanUp_UI(), []);
 
     return (
-        <ContentWrapper>
+        <>
             {!state.loading ? (
                 <FormWrapper title="Login form.">
                     <form
@@ -89,7 +89,7 @@ const Login = () => {
             ) : (
                 <Loader />
             )}
-        </ContentWrapper>
+        </>
     );
 };
 

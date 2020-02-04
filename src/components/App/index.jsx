@@ -7,13 +7,14 @@ import Home from "../Home";
 import Navbar from "../layout/Navbar";
 import SignUp from "../SignUp";
 import SignIn from "../SignIn";
+import MainWrapper from "../layout/MainWrapper";
 
 function App() {
     const { user } = useContext(AuthContext);
     return (
         <>
             <Navbar />
-            <div>
+            <MainWrapper>
                 {!user ? (
                     <>
                         <Route exact component={SignUp} path="/signup" />
@@ -26,7 +27,7 @@ function App() {
                         <Redirect to="/" />
                     </>
                 )}
-            </div>
+            </MainWrapper>
         </>
     );
 }
