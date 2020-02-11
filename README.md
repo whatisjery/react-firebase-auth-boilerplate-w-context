@@ -13,16 +13,21 @@ Quick setup for getting started with firebase auth within a react application us
 
 ### usage :
 
-Replace the firebase config by yours, and sucure necessary data to a .env file, e.g :
+Replace the current firebase config by yours, and place data in a .env file, ex :
 
+.env
 ```
 REACT_APP_API_KEY='YOUR_KEY'
+```
 
+firebase.js
+```
 const app = firebase.initializeApp({
     apiKey: process.env.REACT_APP_API_KEY,
     ...rest,
 })
 ```
+
 
 the context return several methods for user authentification e.g, signInUser, signUpUser etc, ... (it can be completed using other firebase method e.g, recover password ...).
 It also returns a 'user' object that gives informations about the user that is currently logged in.
