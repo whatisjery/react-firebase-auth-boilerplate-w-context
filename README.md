@@ -1,6 +1,8 @@
 ## Firebase authentication boilerplate with hooks!
 
-Quick setup for getting started with firebase auth within a react application using the context API as an alternative to redux. [Live example](https://pensive-villani-57d695.netlify.com/#/signup).
+Quick setup for getting started with firebase auth in a react application using the context API as an alternative to redux.
+[Live example](https://pensive-villani-57d695.netlify.com/#/signup).
+
 
 
 ![Thumbnail](preview.png)
@@ -27,7 +29,3 @@ const app = firebase.initializeApp({
     ...rest,
 })
 ```
-
-
-the context return several methods for user authentification e.g, signInUser, signUpUser etc, ... (it can be completed using other firebase method e.g, recover password ...).
-It also returns a 'user' object that gives informations about the user that is currently logged in.
